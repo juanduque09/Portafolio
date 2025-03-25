@@ -1,9 +1,30 @@
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0px;
+}
+
+.Icon {
+  width: 20px;
+  height: 20px;
+}
+
+.background{
+  background-image: url(fondo.jpeg);
+  margin: 0px;
+  padding: 50px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .contenedor {
-  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+  flex: 1 1 calc(2/3 * 100%);
 }
 
 .intro {
@@ -11,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  justify-content: center;
 }
 
 .desarrollador {
@@ -26,8 +48,9 @@ body {
 .fotoImg {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
-  align-items: center;
+  margin: 0px 0;
+  align-items: flex-start;
+  /* flex: 1 1 calc(1/3 * 100%); */
 }
 
 .foto {
@@ -45,20 +68,24 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 900;
   font-weight: 300;
+  background: grey;
+  margin-top: 0px;
 }
 
 .grid {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
     gap: 30px;
+    margin: 10px 20px;
 }
 
 .card {
-    padding: 25px 25px;
+    padding: 25px;
     border-radius: 10px;
-    width: 180px;
+    /* width: 50px; */
     text-align: center;
+    flex: 1 1 calc(1/4 * 100%);
     /* text-align: justify; */
 }
 
