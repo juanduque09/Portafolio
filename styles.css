@@ -9,7 +9,7 @@ body {
 }
 
 .background{
-  background-image: url(fondo.jpeg);
+  background-image: url(images/fondo.jpeg);
   margin: 0px;
   padding: 50px;
   background-size: cover;
@@ -94,4 +94,71 @@ body {
     align-items: center;
     justify-content: start;
     gap: 10px;
+}
+
+/* ...existing code... */
+
+/* Estilos para tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .background {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .foto {
+    width: 150px;
+    height: 200px;
+  }
+
+  .contenedor {
+    text-align: center;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card {
+    flex: 1 1 calc(1/2 * 100%);
+  }
+}
+
+/* Estilos para teléfonos (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .background {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .foto {
+    width: 120px;
+    height: 150px;
+  }
+
+  .contenedor {
+    text-align: center;
+  }
+
+  .conocimientos {
+    padding: 20px;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .iconText {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Icon {
+    width: 30px;
+    height: 30px;
+  }
 }
