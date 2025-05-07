@@ -96,9 +96,7 @@ body {
     gap: 10px;
 }
 
-/* ...existing code... */
-
-/* Estilos para tablets (pantallas entre 768px y 1024px) */
+/* Estilos para tablets */
 @media (max-width: 1024px) and (min-width: 768px) {
   .background {
     flex-direction: column;
@@ -123,7 +121,7 @@ body {
   }
 }
 
-/* Estilos para teléfonos (pantallas menores a 768px) */
+/* Estilos para teléfonos */
 @media (max-width: 768px) {
   .background {
     flex-direction: column;
