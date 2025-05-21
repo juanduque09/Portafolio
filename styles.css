@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .Icon {
@@ -23,7 +24,6 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
   flex: 1 1 calc(2/3 * 100%);
 }
 
@@ -50,7 +50,6 @@ body {
   flex-direction: column;
   margin: 0px 0;
   align-items: flex-start;
-  /* flex: 1 1 calc(1/3 * 100%); */
 }
 
 .foto {
@@ -74,7 +73,6 @@ body {
 
 .grid {
     display: flex;
-    /* justify-content: space-around; */
     flex-wrap: wrap;
     gap: 30px;
     margin: 10px 20px;
@@ -83,10 +81,8 @@ body {
 .card {
     padding: 25px;
     border-radius: 10px;
-    /* width: 50px; */
     text-align: center;
     flex: 1 1 calc(1/4 * 100%);
-    /* text-align: justify; */
 }
 
 .iconText {
@@ -96,7 +92,6 @@ body {
     gap: 10px;
 }
 
-/* Estilos para tablets */
 @media (max-width: 1024px) and (min-width: 768px) {
   .background {
     flex-direction: column;
@@ -121,7 +116,6 @@ body {
   }
 }
 
-/* Estilos para teléfonos */
 @media (max-width: 768px) {
   .background {
     flex-direction: column;
@@ -158,5 +152,150 @@ body {
   .Icon {
     width: 30px;
     height: 30px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: #222 !important;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  z-index: 200;
+  transition: transform 0.3s;
+  transform: translateX(-100%);
+}
+
+.sidebar-toggle:checked ~ .sidebar {
+  transform: translateX(0);
+}
+
+.sidebar-logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 0 0 30px 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-links li {
+  width: 100%;
+}
+
+.sidebar-links li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: background 0.2s;
+}
+
+.sidebar-links li a:hover {
+  background: #444;
+}
+
+.sidebar-icon {
+  display: block;
+  color: #fff;
+  background: #222;
+  font-size: 1.5em;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s;
+  padding-top: 0;
+}
+
+@media (min-width: 900px) {
+  .sidebar-toggle:checked ~ .main-content {
+    margin-left: 220px;
+  }
+}
+
+.sidebar-toggle:checked + .sidebar-icon {
+  display: none;
+}
+
+.contacto {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto h2 {
+  margin-bottom: 25px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.contacto-card {
+  background: #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 260px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1em;
+}
+
+.contacto-item i {
+  font-size: 1.5em;
+  color: #ffd700;
+}
+
+.contacto-item a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contacto-item a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .contacto-card {
+    padding: 20px 10px;
+    min-width: 0;
+    width: 90vw;
   }
 }

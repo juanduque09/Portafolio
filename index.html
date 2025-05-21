@@ -15,64 +15,105 @@
     />
   </head>
   <body>
-  
-    <div class="background">
-    <div class="fotoImg">
-      <img src="images/perfil.JPG" alt="foto de perfil" class="foto" />
+
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" />
+  <label for="sidebar-toggle" class="sidebar-icon">
+    <i class="fa fa-bars"></i>
+  </label>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">Juan José Duque</div>
+    <ul class="sidebar-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#conocimientos">Conocimientos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </aside>
+
+    <main class="main-content">
+      <div class="background" id="inicio">
+        <div class="fotoImg">
+          <img src="images/perfil.JPG" alt="foto de perfil" class="foto" />
+        </div>
+        <div class="contenedor">
+          <h1 class="intro">Juan José Duque</h1>
+          <h2 class="desarrollador">Desarrollo Web</h2>
+        </div>
+      </div>
+
+<div class="conocimientos" id="conocimientos">
+  <h2>Conocimientos</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/css-3.png">
+        <h3>CSS</h3>
+      </div>
+      <p>Domino la creación de interfaces modernas y atractivas, aplicando animaciones y estilos responsivos con CSS3.</p>
     </div>
-    <div class="contenedor">
-      <h1 class="intro">Juan José Duque</h1>
-      <h2 class="desarrollador">Desarrollo Web</h2>
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/html-5.png">
+        <h3>HTML</h3>
+      </div>
+      <p>Estructuro páginas web semánticas y accesibles, asegurando una base sólida para cualquier proyecto digital.</p>
+    </div>
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/js.png">
+        <h3>JavaScript</h3>
+      </div>
+      <p>Desarrollo funcionalidades interactivas y dinámicas, mejorando la experiencia del usuario con JavaScript moderno.</p>
+    </div>
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/react.png">
+        <h3>React</h3>
+      </div>
+      <p>Construyo aplicaciones web escalables y eficientes utilizando componentes reutilizables con React.</p>
+    </div>
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/mysql.png">
+        <h3>MySql</h3>
+      </div>
+      <p>Gestiono bases de datos relacionales, optimizando consultas y asegurando la integridad de la información.</p>
+    </div>
+    <div class="card">
+      <div class="iconText">
+        <img class="Icon" src="images/github.png">
+        <h3>Github</h3>
+      </div>
+      <p>Versiono y colaboro en proyectos de software, aplicando buenas prácticas de control de versiones con GitHub.</p>
     </div>
   </div>
+</div>
 
-    <div class="conocimientos">
-      <h2>Conocimientos</h2>
-      <div class="grid">
-        <div class="card">
-            <div class="iconText">
-            <img class="Icon" src="images/css-3.png"> 
-            <h3>CSS</h3>
-        </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="card">
-            <div class="iconText">
-              <img class="Icon" src="images/html-5.png"> 
-            <h3>HTML</h3>
-        </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="card">
-            <div class="iconText">
-              <img class="Icon" src="images/js.png">
-            <h3>JavaScript</h3>
-        </div>
-            <p>Loeem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="card">
-            <div class="iconText">
-              <img class="Icon" src="images/react.png">
-            <h3>React</h3>
-        </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="card">
-            <div class="iconText">
-              <img class="Icon" src="images/mysql.png">
-            <h3>MySql</h3>
-        </div>
-            <p>ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="card">
-            <div class="iconText">
-              <img class="Icon" src="images/github.png">
-            <h3>Github</h3>
-        </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-
-      </div>
+<div class="contacto" id="contacto">
+  <h2>Contacto</h2>
+  <div class="contacto-card">
+    <div class="contacto-item">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:jjdukec@gmail.com">jjdukec@gmail.com</a>
     </div>
+    <div class="contacto-item">
+      <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/juan-jos%C3%A9-duque-5b782115a/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="contacto-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/juanduque09" target="_blank">GitHub</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+      document.querySelectorAll('.sidebar-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('sidebar-toggle').checked = false;
+        });
+      });
+    </script>
   </body>
 </html>
