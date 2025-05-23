@@ -4,20 +4,25 @@ body {
   padding: 0;
 }
 
+/* Imagen de icono */
 .Icon {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 
-.background{
+/* Fondo y presentación */
+.background {
   background-image: url(images/fondo.jpeg);
-  margin: 0px;
-  padding: 50px;
+  margin: 0;
+  padding: 50px 20px;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  min-height: 350px;
+  gap: 40px;
 }
 
 .contenedor {
@@ -48,7 +53,7 @@ body {
 .fotoImg {
   display: flex;
   flex-direction: column;
-  margin: 0px 0;
+  margin: 0;
   align-items: flex-start;
 }
 
@@ -59,8 +64,9 @@ body {
   object-fit: cover;
 }
 
+/* Sección conocimientos */
 .conocimientos {
-  padding: 40px;
+  padding: 40px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,93 +74,47 @@ body {
   font-size: 900;
   font-weight: 300;
   background: grey;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 10px 0;
+  width: 100%;
+  justify-content: center;
 }
 
 .card {
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    flex: 1 1 calc(1/4 * 100%);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1 1 250px;
+  min-width: 220px;
+  max-width: 320px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin: 10px;
+  background-color: grey;
 }
 
 .iconText {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-  .background {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .foto {
-    width: 150px;
-    height: 200px;
-  }
-
-  .contenedor {
-    text-align: center;
-  }
-
-  .grid {
-    gap: 20px;
-  }
-
-  .card {
-    flex: 1 1 calc(1/2 * 100%);
-  }
+.card h3 {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0 0 0;
 }
-
-@media (max-width: 768px) {
-  .background {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .foto {
-    width: 120px;
-    height: 150px;
-  }
-
-  .contenedor {
-    text-align: center;
-  }
-
-  .conocimientos {
-    padding: 20px;
-  }
-
-  .grid {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-
-  .iconText {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .Icon {
-    width: 30px;
-    height: 30px;
-  }
-}
-
+/* Sidebar lateral */
 .sidebar {
   position: fixed;
   left: 0;
@@ -226,6 +186,11 @@ body {
   display: none;
 }
 
+/* Oculta el icono cuando el sidebar está abierto */
+.sidebar-toggle:checked + .sidebar-icon {
+  display: none;
+}
+
 .main-content {
   margin-left: 0;
   transition: margin-left 0.3s;
@@ -238,10 +203,7 @@ body {
   }
 }
 
-.sidebar-toggle:checked + .sidebar-icon {
-  display: none;
-}
-
+/* CONTACTO */
 .contacto {
   background: #222;
   color: #fff;
@@ -292,10 +254,124 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .contacto-card {
-    padding: 20px 10px;
+/* Media query para tablet en modo portrait */
+@media  (max-width: 1024px) and (min-width: 701px) {
+  .background {
+    flex-direction: row;
+    padding: 24px 4vw;
+    gap: 20px;
+    min-height: 220px;
+  
+  }
+  .foto {
+    width: 120px;
+    height: 150px;
+  }
+  .contenedor {
+    text-align: center;
+    align-items: center;
+  }
+  .conocimientos {
+    padding: 20px 2vw;
+    display: block;
+    text-align: center;
+  }
+  .grid {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    width: 100%;
+  }
+  .card {
     min-width: 0;
-    width: 90vw;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 18px 0;
+    padding: 18px 10px;
+    box-sizing: border-box;
+  }
+
+  .card p {
+    font-size: 20px;
   }
 }
+
+
+/* Media query para mobile en modo portrait */
+@media (max-width: 700px) {
+  .background {
+    flex-direction: row;
+    padding: 18px 2vw;
+    gap: 14px;
+    min-height: 120px;
+  }
+  .foto {
+    width: 100px;
+    height: 120px;
+  }
+  .contenedor {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  .intro {
+    font-size: 2em;
+    margin-bottom: 12px;
+  }
+  .desarrollador {
+    font-size: 1.3em;
+    margin-bottom: 12px;
+  }
+  .conocimientos {
+    padding: 18px 2vw;
+  }
+  .conocimientos h2 {
+    font-size: 2em;
+    margin-bottom: 22px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 0;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 22px 0;
+    padding: 28px 14px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background:gray;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 1px solid gray;
+    font-size: 40px;
+  }
+  .iconText {
+    margin-bottom: 18px;
+  }
+  .card h3 {
+    font-size: 20px;
+    margin: 14px 0 0 0;
+  }
+  .card p {
+    font-size: 1.18sem;
+    font-size: 20px;
+    margin: 14px 0 0 0;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .contacto h2 {
+    font-size: 1.4em;
+  }
+  .contacto-card {
+    padding: 22px 6vw;
+    font-size: 1.18em;
+  }
+  .sidebar {
+    z-index: 3000;
+  } 
+} 
